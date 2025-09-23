@@ -15,7 +15,7 @@ import Pricing from "../components/Pricing.jsx";
 import HowItWorks from "../components/HowItWorks.jsx";
 import Gallery from "../components/Gallery.jsx";
 import Testimonials from "../components/Testimonials.jsx";
-import FAQ from "../components/Faq.jsx";
+import FAQ from "../components/FAQ.jsx";
 import CTA from "../components/CTA.JSX";
 import FloatingBook from "../components/FloatingBook.jsx";
 import Footer from "../components/Footer.jsx";
