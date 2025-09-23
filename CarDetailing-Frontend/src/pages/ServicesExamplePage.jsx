@@ -66,7 +66,7 @@ const ServicesExamplePage = () => {
       offerPrice: 1200,
       offer: 20,
       duration: "1 hour",
-      images: ["https://ecowavemobiledetail.com/wp-content/uploads/2021/01/car-detailing-maintenance-cleaning-engine-with-the-XVTFYB6-scaled.jpg"],
+      images: ["https://www.carparts.com/blog/wp-content/uploads/2023/12/cleaning-of-automotive-engine-bay-1200x800.jpg"],
       starRating: 4,
       reviews: ["Engine looks great!", "Very thorough cleaning!"],
     },
