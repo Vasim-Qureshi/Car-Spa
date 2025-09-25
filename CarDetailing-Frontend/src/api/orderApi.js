@@ -1,13 +1,13 @@
 // src/services/orderService.ts
 
 // Define the base URL
-// const URL = import.meta.env.VITE_BASE_URL || 'http://localhost:5000';
+const URL = import.meta.env.VITE_BASE_URL || 'http://localhost:5000';
 
 const token = localStorage.getItem('token');
 
 // Create a RazorPay order
 export const createRazorPayOrder = async (orderData) => {
-  const res = await fetch("http://localhost:5000/api/orders/razorpay", {
+  const res = await fetch(`${URL}/api/orders/razorpay`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ orderData }),
@@ -25,7 +25,7 @@ export const createRazorPayOrder = async (orderData) => {
     order_id: data.razorpayOrder.id,
     handler: async function (response) {
       // Verify payment
-      await fetch("http://localhost:5000/api/orders/razorpay/verify", {
+      await fetch(`${URL}/api/orders/razorpay/verify`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -42,7 +42,7 @@ export const createRazorPayOrder = async (orderData) => {
 
 // Create a Paytm order
 export const createPaytmOrder = async () => {
-  const res = await fetch("http://localhost:5000/api/orders/paytm", {
+  const res = await fetch(`${URL}/api/orders/paytm`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ customerId: "CUST001", amount: "500" }),
