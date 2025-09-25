@@ -16,8 +16,6 @@ export const createRazorPayOrder = async (orderData) => {
   const data = await res.json();
   console.log(orderData);
 
-  console.log(data);
-
   const options = {
     key: data.key,
     amount: data.razorpayOrder.amount,
